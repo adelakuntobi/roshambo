@@ -18,7 +18,8 @@ The designs were created to the following widths:
 - Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%)
 
 ### Neutral
-
+<!-- 0 0 0 45px hsl(217deg 16% 45% / 48%) -->
+<!-- 0 0 0 90px hsl(217deg 16% 45% / 22%) -->
 - Dark Text: hsl(229, 25%, 31%)
 - Score Text: hsl(229, 64%, 46%)
 - Header Outline: hsl(217, 16%, 45%)
