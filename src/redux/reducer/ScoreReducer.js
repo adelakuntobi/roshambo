@@ -22,6 +22,13 @@ const scoreReducer = (state = initialState, action) => {
       computerScore: action.payload + 1
     }
   
+  case "RESET_SCORES":
+    return {
+      ...state,
+      humanScore: 0,
+      computerScore: 0
+    }
+  
     default:
       return state
   }

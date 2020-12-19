@@ -13,3 +13,10 @@ export const addComputerScore = (score) => {
     payload: score
   }
 }
+
+export const resetScore = () => {
+  return {
+    type: "RESET_SCORES",
+    payload: "tobi"
+  }
+}

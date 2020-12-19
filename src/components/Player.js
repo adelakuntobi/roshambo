@@ -50,7 +50,7 @@ function Player(props) {
 
 
   return (
-    <div className="mx-2 lg:mx-10 my-2 ">
+    <div className="mx-3 md:mx-6 lg:mx-10 my-2 ">
       <BoxShadow secondShadow={secondShadow}>
         <BorderDiv firstShadow={firstShadow} onClick={click} className="cursor-pointer rounded-full" color={color}>
           <OtherDiv padding={padding} background={background}>

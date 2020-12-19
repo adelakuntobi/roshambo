@@ -100,25 +100,25 @@ function Playing(props) {
   }, [])
   return (
     <section>
-      <h1 className={"text-5xl text-center uppercase mb-2 z-20 " + (computerValue ? "block lg:hidden" : "hidden")}>{message}</h1>
-      <section className="flex justify-between md:justify-center items-center w-11/12 md:w-full mx-auto">
-        <div className="px-0 md:px-8 z-30">
-          <H1 className="text-center uppercase text-xl lg:text-2xl my-4 z-20">You Picked</H1>
+      <h1 className={"text-6xl text-center uppercase my-4 z-30 " + (computerValue ? "block lg:hidden" : "hidden")}>{message}</h1>
+      <section className="flex justify-between md:justify-center items-center w-full sm:w-7/12 md:w-full mx-auto">
+        <div className="px-0 md:px-8">
+          <H1 className="text-center uppercase text-xl lg:text-2xl my-4 z-30">You Picked</H1>
           <div className="text-4xl" onLoad={sendShadow("human")}>
             <Player width="75" height="75"
               padding="80" imageSrc={checkType(currentVal)} color={day}
               firstShadow={firstShadow} secondShadow={secondShadow}
             />
-            <h1 className="text-center uppercase text-3xl my-4 z-20">{day}</h1>
+            <h1 className="text-center uppercase text-3xl my-4 z-30">{day}</h1>
           </div>
         </div>
-        <div className={"z-10 " + (computerValue ? "hidden lg:block" : "hidden")}>
+        <div className={"z-30 " + (computerValue ? "hidden lg:block" : "hidden")}>
           <h1 className="text-6xl uppercase transform transition-all duration-1000 mb-2">{message}</h1>
           <Button onClick={changeState} className={"w-full bg-white font-normal p-3 rounded-lg text-xl uppercase"}>Play Again</Button>
         </div>
 
-        <div className="px-0 md:px-8 z-30">
-          <H1 className="text-center uppercase text-xl lg:text-2xl my-4">Computer</H1>
+        <div className="px-0 md:px-8">
+          <H1 className="text-center uppercase text-xl lg:text-2xl my-4 z-30">Computer</H1>
           <div className="text-4xl" onLoad={sendShadow("computer")}>
             <Player width="75" height="75"
               padding="80" imageSrc={checkType(computerValue)}
@@ -130,9 +130,10 @@ function Playing(props) {
           </div>
         </div>
       </section>
-      <div className={"z-10 mt-6 mx-auto w-11/12 md:w-5/12 text-center " + (computerValue ? "block lg:hidden" : "hidden")}>
-  
-        <Button onClick={changeState} className={"w-full bg-white font-normal p-3 rounded-lg text-xl uppercase"}>Play Again</Button>
+      <div className={"z-30 mt-6 mx-auto w-11/12 md:w-5/12 text-center " + (computerValue ? "block lg:hidden" : "hidden")}>
+        <Button onClick={changeState} 
+        className={"w-full bg-white font-normal p-3 rounded-lg text-xl uppercase"}>
+          Play Again</Button>
       </div>
     </section>
   )
