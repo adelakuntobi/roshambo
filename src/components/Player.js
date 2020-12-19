@@ -8,23 +8,36 @@ const Logo = styled.img.attrs(props => ({
   width: ${props => props.width || "50"}px;
   position: relative;
   z-index: ${props => props.index || "1"};
+  @media (max-width: 768px) {
+    height: 35px;
+    width: 35px;
+  }
   `;
 
 const OtherDiv = styled.div`
   background-color: ${props => props.background || "white"};
   padding: ${props => props.padding || "60"}px;
   border-radius: 50%;
+
+  @media (max-width: 768px) {
+    padding: ${"40"}px;
+  }
   `;
 
 const BorderDiv = styled.div`
   // background-color: white;
   padding: 20px;
   border-radius: 50%;
+  
   z-index: 3;
   cursor: pointer;
   width: fit-content;
+  margin: auto;
   background: radial-gradient(var(--${props => props.color}));
   box-shadow: ${props => props.firstShadow || "none"};
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
   `;
 
 const BoxShadow = styled.div`
@@ -37,7 +50,7 @@ function Player(props) {
 
 
   return (
-    <div className="mx-10 my-2 ">
+    <div className="mx-2 lg:mx-10 my-2 ">
       <BoxShadow secondShadow={secondShadow}>
         <BorderDiv firstShadow={firstShadow} onClick={click} className="cursor-pointer rounded-full" color={color}>
           <OtherDiv padding={padding} background={background}>
