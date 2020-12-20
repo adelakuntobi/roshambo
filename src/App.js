@@ -115,7 +115,7 @@ function App(props) {
             <ModalContent id="tobi" className="text-black p-8">
               {
                 rules ?
-                  <img src={rulesSvg} alt="rules" id="tobi" className="p-8 bg-white" /> : <div>
+                  <img src={rulesSvg} alt="rules" id="tobi" className="p-4 md:p-8 bg-white" /> : <div>
                     <img src={editSvg} alt="Edit" className="w-64 mx-auto hidden md:block" />
                     <p id="tobi" className="text-2xl md:text-3xl mt-4">Are you sure you want to reset the scores?</p>
                     <div id="tobi" className="flex justify-between items-center uppercase">
